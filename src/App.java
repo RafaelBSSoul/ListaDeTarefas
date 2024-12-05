@@ -16,7 +16,12 @@ public class App {
         tarefa.add(novaTarefa);
 
     }
-    System.out.println(tarefa);
+    System.out.println("---Lista de Tarefas---");
+    System.out.println(" -> "+tarefa.get(0));
+    System.out.println(" -> "+tarefa.get(1));
+    System.out.println(" -> "+tarefa.get(2));
+    System.out.println("----------------------");
+
 
 
 
