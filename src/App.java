@@ -59,3 +59,6 @@ entrada.close();
     }
 }//fechamento do código
 
+/*Utilizando conhecimentos basicos de estrutura e Collections List para adicionar
+ * tarefas.
+ */
