@@ -2,6 +2,11 @@ package Tarefas;
 
 public class Tarefa {
     private String tarefas;
+    int pontos;
+
+    public void pontosTarefaConcluidas(){
+        // criar um metodo para calcular pontos por tarefa concluída
+    }
 
     @Override
     public String toString() {

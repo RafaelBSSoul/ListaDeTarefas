@@ -9,24 +9,53 @@ public class App {
         System.out.println("Hello, World! Bem vindo, a Lista de Tarefas");
         Scanner entrada = new Scanner(System.in);
         List <Tarefa> tarefa = new ArrayList<>();
-        final int quantidadeDeTarefas=3;
-        for(int i=0;i<quantidadeDeTarefas;i++){
-        Tarefa novaTarefa = new Tarefa(null);
-        novaTarefa.setTarefas(entrada.nextLine());
-        tarefa.add(novaTarefa);
+        //final int quantidadeDeTarefas=3;
+        
+       
+        String opcao;
 
-    }
+        System.out.println("Bem vindo a lista de tarefas");
+        System.out.println("OPÇÕES");
+        System.out.println("Opção 1 - adicionar tarefa");
+        System.out.println("Opção 2 - tarefa concluída");
+
+        opcao = entrada.nextLine( );
+        while (opcao.equals("1")||opcao.equals("2")) {
+            
+      
+        
+         
+            switch (opcao) {
+            case "1":
+            if (tarefa.isEmpty()) {
+                Tarefa novaTarefa = new Tarefa(null);
+                novaTarefa.setTarefas(entrada.nextLine()); 
+                        tarefa.add(novaTarefa);
+                        System.out.println(tarefa);
+            }else{
+                
+                Tarefa novaTarefa = new Tarefa(null);
+                novaTarefa.setTarefas(entrada.nextLine()); 
+                        tarefa.add(novaTarefa);
+                        System.out.println(tarefa);
+            }
+            break;
+              case "2":
+        tarefa.remove(entrada.nextInt());
+                break;
+        
+            default:
+                break;
+        } // fim switch case
+        opcao =entrada.nextLine();
+    }// fim while
     System.out.println("---Lista de Tarefas---");
     System.out.println(" -> "+tarefa.get(0));
     System.out.println(" -> "+tarefa.get(1));
     System.out.println(" -> "+tarefa.get(2));
     System.out.println("----------------------");
 
-
-
-
-        
-
 entrada.close();
     }
-}
+}//fechamento do código
+
