@@ -9,7 +9,7 @@ public class App {
         System.out.println("Hello, World! Bem vindo, a Lista de Tarefas");
         Scanner entrada = new Scanner(System.in);
         List <Tarefa> tarefa = new ArrayList<>();
-        //final int quantidadeDeTarefas=3;
+        final int quantidadeDeTarefas=3;
         
        
         String opcao;
@@ -51,11 +51,11 @@ public class App {
        System.out.println("Qual a entrada "+ opcao);
        opcao= entrada.nextLine();
     }// fim while
-    System.out.println("---Lista de Tarefas---");
-    System.out.println(" -> "+tarefa.get(0));
-    System.out.println(" -> "+tarefa.get(1));
-    System.out.println(" -> "+tarefa.get(2));
-    System.out.println("----------------------");
+
+    for (int i =0;i<=quantidadeDeTarefas;i++) {
+        System.out.println(" -> "+tarefa);
+    }
+    
 
 entrada.close();
     }
