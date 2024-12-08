@@ -23,7 +23,8 @@ public class App {
         while (opcao.equals("1")||opcao.equals("2")) {
             
       
-        
+            opcao = entrada.nextLine( );
+
          
             switch (opcao) {
             case "1":
@@ -47,7 +48,8 @@ public class App {
             default:
                 break;
         } // fim switch case
-        opcao =entrada.nextLine();
+       System.out.println("Qual a entrada "+ opcao);
+       opcao= entrada.nextLine();
     }// fim while
     System.out.println("---Lista de Tarefas---");
     System.out.println(" -> "+tarefa.get(0));
